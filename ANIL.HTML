@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ANIL FURNITURE & CARPENTRY | ANIL SHARMA</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#eeeeee;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#242424;
+    padding:15px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px #0005;
+}
+
+.logo{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#d39b55;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:18px;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#d39b55;
+}
+
+/* HERO */
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+    background:
+    linear-gradient(#222b,#222b),
+    url("images/hero.jpg");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:750px;
+    color:white;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero h1 span{
+    color:#d39b55;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:28px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    margin:6px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:#d39b55;
+    color:white;
+}
+
+.btn-dark{
+    border:1px solid white;
+    color:white;
+}
+
+/* SECTIONS */
+section{
+    padding:70px 7%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    font-size:34px;
+}
+
+.section-title p{
+    margin-top:10px;
+    color:#666;
+}
+
+/* SERVICES */
+.services{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:30px 20px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px #0001;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* ABOUT */
+.about{
+    background:#292929;
+    color:white;
+}
+
+.about-box{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+}
+
+.about-box p{
+    line-height:1.8;
+    color:#ddd;
+}
+
+/* GALLERY */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+    border-radius:12px;
+    background:#ccc;
+}
+
+/* CONTACT */
+.contact{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.contact-box{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px #0001;
+}
+
+.contact-box h3{
+    margin-bottom:20px;
+}
+
+.contact-item{
+    margin:18px 0;
+    font-size:16px;
+}
+
+.contact-item b{
+    color:#b47735;
+}
+
+/* FORM */
+form input,
+form textarea{
+    width:100%;
+    padding:14px;
+    margin-bottom:12px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    outline:none;
+}
+
+form textarea{
+    height:120px;
+    resize:none;
+}
+
+form button{
+    width:100%;
+    padding:14px;
+    border:0;
+    border-radius:8px;
+    background:#d39b55;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* =========================
+   FOLLOW US
+========================= */
+
+.follow-us{
+    background:#242424;
+    padding:55px 20px;
+    text-align:center;
+    color:white;
+}
+
+.follow-us h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.follow-us p{
+    color:#bbb;
+    margin-bottom:30px;
+}
+
+.social-links{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
+}
+
+.social-link{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    min-width:150px;
+    padding:13px 22px;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.social-link:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px #0005;
+}
+
+/* Facebook */
+.facebook{
+    background:#1877F2;
+}
+
+/* Instagram */
+.instagram{
+    background:linear-gradient(
+        45deg,
+        #feda75,
+        #fa7e1e,
+        #d62976,
+        #962fbf,
+        #4f5bd5
+    );
+}
+
+/* YouTube */
+.youtube{
+    background:#FF0000;
+}
+
+.social-icon{
+    font-size:22px;
+}
+
+/* FOOTER */
+footer{
+    background:#1d1d1d;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+}
+
+footer strong{
+    color:#d39b55;
+}
+
+/* WHATSAPP */
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:58px;
+    height:58px;
+    background:#25D366;
+    color:white;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    text-decoration:none;
+    box-shadow:0 5px 15px #0004;
+    z-index:999;
+}
+
+/* MOBILE */
+@media(max-width:800px){
+
+    header{
+        padding:13px 5%;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    nav a{
+        margin-left:8px;
+        font-size:11px;
+    }
+
+    .hero{
+        min-height:80vh;
+    }
+
+    .hero h1{
+        font-size:35px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .services{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery img{
+        height:170px;
+    }
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:55px 5%;
+    }
+
+    .section-title h2{
+        font-size:28px;
+    }
+
+    .follow-us h2{
+        font-size:27px;
+    }
+
+    .social-links{
+        flex-direction:column;
+    }
+
+    .social-link{
+        width:90%;
+        max-width:300px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+
+<div class="logo">
+ANIL <span>FURNITURE</span>
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#gallery">Work</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+Professional <span>Carpenter</span><br>
+ANIL SHARMA
+</h1>
+
+<p>
+Custom Furniture • Wood Work • Furniture Repair •
+Beautiful Designs • Quality Work
+</p>
+
+<a href="#contact" class="btn btn-primary">
+Get a Quote
+</a>
+
+<a href="tel:+919608093874" class="btn btn-dark">
+📞 Call Now
+</a>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section id="services">
+
+<div class="section-title">
+<h2>Our Services</h2>
+<p>Quality carpentry work according to your needs</p>
+</div>
+
+<div class="services">
+
+<div class="card">
+<div class="icon">🪵</div>
+<h3>Custom Furniture</h3>
+<p>
+आपकी जरूरत और पसंद के अनुसार custom furniture बनाया जाता है।
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛏️</div>
+<h3>Bed & Bedroom Work</h3>
+<p>
+Modern और मजबूत bed तथा bedroom furniture का काम।
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🚪</div>
+<h3>Door & Wood Work</h3>
+<p>
+Door, wooden frame और अन्य लकड़ी का काम।
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🪑</div>
+<h3>Chair & Table</h3>
+<p>
+घर और दुकान के लिए stylish chair और table।
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔧</div>
+<h3>Furniture Repair</h3>
+<p>
+पुराने या खराब furniture की repair और maintenance।
+</p>
+</div>
+
+<div class="card">
+<div class="icon">✨</div>
+<h3>Interior Wood Work</h3>
+<p>
+घर और office के लिए premium wooden interior work।
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about">
+
+<div class="about-box">
+
+<div class="section-title">
+<h2>About ANIL SHARMA</h2>
+</div>
+
+<p>
+नमस्ते! मेरा नाम <b>ANIL SHARMA</b> है।
+मैं professional carpenter हूँ और custom furniture,
+wood work, furniture repair और interior wood work
+जैसे काम करता हूँ।
+
+हमारा उद्देश्य है कि हर customer को
+बेहतरीन quality, मजबूत workmanship और
+उसकी जरूरत के अनुसार शानदार furniture मिले।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="gallery">
+
+<div class="section-title">
+<h2>Our Work</h2>
+<p>हमारे काम की कुछ झलकियां</p>
+</div>
+
+<div class="gallery">
+
+<img src="C:\Users\Sharm\OneDrive\Documents\1.jpeg" alt="Furniture Work">
+<img src="C:\Users\Sharm\OneDrive\Documents\2.jpeg" alt="Furniture Work">
+<img src="C:\Users\Sharm\OneDrive\Documents\3.jpeg" alt="Furniture Work">
+<img src="C:\Users\Sharm\OneDrive\Documents\4.jpeg" alt="Furniture Work">
+<img src="images/work5.jpg" alt="Furniture Work">
+<img src="images/work6.jpg" alt="Furniture Work">
+
+</div>
+
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Us</h2>
+<p>Furniture या carpentry work के लिए संपर्क करें</p>
+</div>
+
+<div class="contact">
+
+<div class="contact-box">
+
+<h3>Get In Touch</h3>
+
+<div class="contact-item">
+📞 <b>Phone:</b> +91 96080 93874
+</div>
+
+<div class="contact-item">
+💬 <b>WhatsApp:</b> +91 96080 93874
+</div>
+
+<div class="contact-item">
+📍 <b>Location:</b> Your City, Bihar
+</div>
+
+<div class="contact-item">
+🕒 <b>Working Time:</b> 9:00 AM – 7:00 PM
+</div>
+
+</div>
+
+
+<div class="contact-box">
+
+<h3>Send Enquiry</h3>
+
+<form onsubmit="sendWhatsApp(); return false;">
+
+<input id="name"
+type="text"
+placeholder="Your Name"
+required>
+
+<input id="phone"
+type="tel"
+placeholder="Mobile Number"
+required>
+
+<textarea id="message"
+placeholder="आपको कौन सा furniture/work करवाना है?"
+required></textarea>
+
+<button type="submit">
+Send Enquiry on WhatsApp
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FOLLOW US ON
+========================= -->
+
+<section class="follow-us">
+
+<h2>Follow Us On</h2>
+
+<p>
+हमारे latest furniture work और updates के लिए हमें follow करें
+</p>
+
+<div class="social-links">
+
+<!-- FACEBOOK LINK -->
+<a
+href="YOUR_FACEBOOK_LINK"
+target="_blank"
+class="social-link facebook"
+rel="noopener noreferrer">
+
+<span class="social-icon">f</span>
+<span>Facebook</span>
+
+</a>
+
+
+<!-- INSTAGRAM LINK -->
+<a
+href="YOUR_INSTAGRAM_LINK"
+target="_blank"
+class="social-link instagram"
+rel="noopener noreferrer">
+
+<span class="social-icon">◎</span>
+<span>Instagram</span>
+
+</a>
+
+
+<!-- YOUTUBE LINK -->
+<a
+href="YOUR_YOUTUBE_LINK"
+target="_blank"
+class="social-link youtube"
+rel="noopener noreferrer">
+
+<span class="social-icon">▶</span>
+<span>YouTube</span>
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer>
+
+<p>
+© 2026 <strong>ANIL FURNITURE & CARPENTRY</strong>
+</p>
+
+<p>
+Professional Carpenter — ANIL SHARMA
+</p>
+
+</footer>
+
+
+<!-- WHATSAPP BUTTON -->
+<a
+class="whatsapp"
+href="https://wa.me/919608093874"
+target="_blank"
+rel="noopener noreferrer">
+💬
+</a>
+
+
+<script>
+
+function sendWhatsApp(){
+
+    let name =
+    document.getElementById("name").value;
+
+    let phone =
+    document.getElementById("phone").value;
+
+    let message =
+    document.getElementById("message").value;
+
+    let text =
+    "Hello ANIL SHARMA,\n\n"+
+    "Name: "+name+
+    "\nMobile: "+phone+
+    "\nWork Required: "+message;
+
+    let whatsappURL =
+    "https://wa.me/919608093874?text="+
+    encodeURIComponent(text);
+
+    window.open(
+        whatsappURL,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
+```
